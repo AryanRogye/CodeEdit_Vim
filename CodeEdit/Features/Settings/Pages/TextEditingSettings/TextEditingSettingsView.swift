@@ -35,6 +35,9 @@ struct TextEditingSettingsView: View {
             Section {
                 bracketPairHighlight
             }
+            Section {
+                vimMode
+            }
         }
     }
 }
@@ -170,6 +173,10 @@ private extension TextEditingSettingsView {
             step: 0.05,
             format: .number
         )
+    }
+    
+    @ViewBuilder private var vimMode: some View {
+        Toggle("Vim Mode", isOn: $textEditing.enableVimMode)
     }
 
     @ViewBuilder private var bracketPairHighlight: some View {

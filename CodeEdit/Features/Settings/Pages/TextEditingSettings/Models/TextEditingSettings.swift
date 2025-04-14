@@ -64,6 +64,9 @@ extension SettingsData {
         /// `2` is one character of spacing between letters, defaults to `1`.
         var letterSpacing: Double = 1.0
 
+        /// TODO: Vim Mode Addition
+        var enableVimMode: Bool = false
+
         /// The behavior of bracket pair highlights.
         var bracketEmphasis: BracketPairEmphasis = BracketPairEmphasis()
 

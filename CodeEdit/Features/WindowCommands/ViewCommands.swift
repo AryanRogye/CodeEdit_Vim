@@ -17,6 +17,8 @@ struct ViewCommands: Commands {
     var showEditorJumpBar
     @AppSettings(\.general.dimEditorsWithoutFocus)
     var dimEditorsWithoutFocus
+    @AppSettings(\.textEditing.enableVimMode)
+    var enableVimMode
 
     @FocusedBinding(\.navigationSplitViewVisibility)
     var navigationSplitViewVisibility
@@ -80,6 +82,7 @@ struct ViewCommands: Commands {
             }
 
             Toggle("Dim editors without focus", isOn: $dimEditorsWithoutFocus)
+            Toggle("Vim Mode", isOn: $enableVimMode)
 
             Divider()
 
